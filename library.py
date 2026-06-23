@@ -37,4 +37,5 @@ def get_overdue_loans():
 #	==========	MAIN	==========
 if	__name__	==	"__main__":
     print("Library	System	Ready")
+    print("Report functions ready")
 
