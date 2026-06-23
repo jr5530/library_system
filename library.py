@@ -8,16 +8,21 @@ loans	=	{}
 #	TODO:	return_book(book_id)
 #	TODO:	extend_loan(book_id,	days)
 #	==========	REPORT	FUNCTIONS	==========
-#	TODO:	search_book(title)
-#	TODO:	get_available_books()
-#	TODO:	get_overdue_loans()
-#	==========	MAIN	==========
-if	__name__	==	"__main__":
-    print("Library	System	Ready")
-
 def search_book(title):
     results = []
     for book_id, book in books.items():
         if title.lower() in book["title"].lower():
             results.append({"id": book_id, **book})
     return results
+
+def get_available_books():
+    available = []
+    for book_id, book in books.items():
+        if book["available"]:
+            available.append({"id": book_id, **book})
+    return available
+#	TODO:	get_overdue_loans()
+#	==========	MAIN	==========
+if	__name__	==	"__main__":
+    print("Library	System	Ready")
+
