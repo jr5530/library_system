@@ -14,3 +14,10 @@ loans	=	{}
 #	==========	MAIN	==========
 if	__name__	==	"__main__":
     print("Library	System	Ready")
+
+def search_book(title):
+    results = []
+    for book_id, book in books.items():
+        if title.lower() in book["title"].lower():
+            results.append({"id": book_id, **book})
+    return results
