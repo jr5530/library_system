@@ -14,6 +14,7 @@ loans	=	{}
 #	==========	MAIN	==========
 if	__name__	==	"__main__":
     print("Library	System	Ready")
+    print("Loan functions ready")
 
 def borrow_book(book_id, reader_id):
     if book_id not in books:
